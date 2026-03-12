@@ -1,0 +1,60 @@
+---
+url: "https://www.nasiptaci.info/kormoran-velky/"
+title: "Kormorán velký NAŠI PTÁCI"
+crawlTime: "2026-03-12T15:39:55.425Z"
+---
+
+# Kormorán velký NAŠI PTÁCI
+
+#### Kormorán velký
+
+22.6.2013
+
+## [![kormoran](http://www.nasiptaci.info/wp-content/uploads/2013/06/kormoran.jpg "Kormorán velký 1 Kompletní průvodce světem našich ptáků. Atlas s fotkami a zvuky, články o druzích a rady, jak přikrmovat. Informační web pro všechny přátele přírody")](http://www.nasiptaci.info/wp-content/uploads/2013/06/kormoran.jpg)
+
+## Velikost
+
+Délka: 77-94 cm.  
+Rozpětí: 121-149 cm.  
+Hmotnost: 1570-3180 g.
+
+**Kormorán velký (Phalacrocorax carbo)**
+
+**Zařazení:**
+
+*   Řád: Veslonozí (Suliformes) – _Dříve řazen do řádu Pelikáni (Pelecaniformes)._
+*   Čeleď: Kormoránovití (Phalacrocoracidae)
+*   Rod: Kormorán (Phalacrocorax)
+*   Druh: Kormorán velký (Phalacrocorax carbo)
+
+**Popis:** Kormorán velký je velký vodní pták, velikostí srovnatelný s husou, ale s štíhlejším tělem, dlouhým ohebným krkem a poměrně dlouhým ocasem (délka těla 80–100 cm, rozpětí křídel 130–160 cm). Je dokonale přizpůsobený k lovu ryb potápěním. Jeho zbarvení je převážně **černé**. Peří dospělých ptáků má však často **výrazný kovový lesk**, který může hrát různými odstíny – zeleným, modrým, fialovým nebo bronzovým, což je patrné zejména na hřbetě a křídelních krovkách. Zobák je poměrně dlouhý, silný, na konci **hákovitě zahnutý** (což pomáhá při uchvacování kluzkých ryb), zbarvený šedavě nebo nažloutle. U kořene zobáku a kolem oka se nachází **neopeřená kůže**, která je **jasně žlutá až oranžová** a její tvar a rozsah se liší u jednotlivých poddruhů. V České republice se vyskytuje především poddruh _**Phalacrocorax carbo sinensis**_ (kormorán velký čínský), který má tuto lysinu protaženou více dozadu za koutek zobáku. **V hnízdním období** (které trvá od zimy do jara/léta) mají dospělí ptáci navíc dva velmi nápadné znaky:
+
+1.  **Rozsáhlé bílé jemné opeření na hlavě a krku**, které jim dodává jakoby „prošedivělý“ vzhled.
+2.  **Velkou, oválnou, čistě bílou skvrnu na boku těla**, v oblasti stehna. Mimo hnízdní období tyto bílé znaky mizí a ptáci jsou celkově černí se žlutou kůží u zobáku. Nohy jsou krátké, silné, černé, a všechny čtyři prsty jsou spojeny plovací blánou (typické pro řád veslonohých). **Mladí ptáci** v prvním roce života jsou zbarveni odlišně – svrchu jsou spíše **tmavě hnědí** a **spodina těla je bělavá až nahnědlá** (rozsah bílé barvy je velmi variabilní). Postupně tmavnou a plně dospělý šat získávají až během několika let. Velmi charakteristický je pro kormorány **postoj při odpočinku**, kdy často sedí na vyvýšeném místě (strom, sloup, bóje, kámen) ve vzpřímené poloze a **s křídly široce roztaženými do stran**. Tímto způsobem si **suší peří**, které na rozdíl od kachen není dokonale voděodolné a po potápění nasákne vodou.
+
+**Výskyt a prostředí:** Kormorán velký má **obrovský, téměř kosmopolitní areál rozšíření**. Vyskytuje se na pobřežích i u vnitrozemských vod v Evropě, Asii, Africe, Austrálii a na východním pobřeží Severní Ameriky. Vytváří několik poddruhů. Severní populace jsou tažné, jižnější spíše stálé. V České republice byl kormorán velký v minulosti (zejména v 19. a první polovině 20. století) téměř vyhuben v důsledku pronásledování člověkem. Od 80. let 20. století však jeho **početnost začala dramaticky narůstat**, a to jak u zimujících a protahujících ptáků, tak i u hnízdící populace. Dnes je **běžným protahujícím a zimujícím druhem** na většině větších vodních ploch a také **stále hojnějším hnízdícím druhem**. Hnízdí v koloniích především v nížinných oblastech s velkými rybničními soustavami nebo vodními nádržemi a s dostatkem vhodných stromů pro stavbu hnízd. **Nejvýznamnější hnízdní kolonie (čítající stovky až tisíce párů) i zimoviště se nacházejí na jižní Moravě**, zejména v oblasti **Novomlýnských nádrží**, na **Lednických rybnících** a v oblasti **soutoku Moravy a Dyje**. Další významné kolonie jsou i v jiných rybníkářských oblastech (jižní Čechy, Polabí, Poodří). Obývá širokou škálu **vodních biotopů**, jak slaných (mořská pobřeží, zálivy, estuáry), tak sladkých (velké řeky, jezera, rybníky, přehradní nádrže). Podmínkou je **dostatek potravy (ryb)** a přítomnost vhodných míst pro **hnízdění** (vysoké stromy v blízkosti vody, případně skalní útesy nebo ostrovy) a **odpočinek/hřadování**.
+
+**Potrava a způsob obživy:** Kormorán velký je téměř výhradně **rybožravý**. Živí se širokou škálou druhů ryb, které loví pod vodou. Velikost lovených ryb se pohybuje obvykle v rozmezí 10 až 25 cm, ale dokáže ulovit i větší kusy (až přes 50 cm). Složení potravy závisí na místní nabídce, často loví nejhojnější druhy ryb v dané lokalitě (v našich podmínkách např. plotice, cejny, okouny, malé kaprovité ryby). Je **vynikajícím potápěčem**. Kořist loví **potápěním z hladiny**. Pod vodou se velmi obratně pohybuje pomocí silných nohou s plovacími blánami a dokáže se potopit do značné hloubky (běžně 5–10 metrů, maximálně i přes 30 m) a zůstat pod vodou až jednu minutu. Kořist aktivně pronásleduje pod vodou a chytá ji do svého hákovitého zobáku. Ulovenou rybu obvykle vynese na hladinu a tam ji polyká (obvykle hlavou napřed). Je považován za velmi efektivního lovce ryb.
+
+**Chování:** Je to vysoce **společenský pták**. **Hnízdí a často i hřaduje (nocuje) ve velkých koloniích**, které mohou být velmi hlučné. Při přeletech mezi lovišti a nocovišti nebo během tahu létají často v hejnech, obvykle v liniích nebo klínovitých formacích („V“). Jak již bylo zmíněno, velmi typické je jeho **posedávání na vyvýšených místech s roztaženými křídly**, kdy si suší promočené peří po potápění. Hlasově se projevuje především na hnízdištích, kde vydává různé hluboké, hrdelní, chrochtavé, krákavé a skřehotavé zvuky. Mimo hnízdiště a při přeletech je spíše tichý.
+
+**Hnízdění:** Hnízdí **v koloniích**, které bývají umístěny obvykle **na vysokých stromech** (listnatých i jehličnatých) v blízkosti vody (na březích rybníků, řek, na ostrovech). Méně často může zahnízdit i na skalních útesech nebo na zemi na klidných ostrovech bez predátorů. **Hnízdo** je poměrně **velká a robustní stavba** postavená z klacků a větví, kterou pár často používá opakovaně po více let a každoročně ji dostavuje a zvětšuje. Hnízdní kotlinku vystýlá jemnějším materiálem, jako je tráva, rákosí, vodní rostliny, někdy i různé odpadky. Hnízdo staví oba partneři. Hnízdění začíná poměrně brzy, někdy již **v únoru nebo březnu**, ale hlavní období je **od dubna do června**. **Právě nyní, na začátku dubna (podle data 2. dubna 2025), jsou tedy hnízdní kolonie velmi aktivní** – ptáci staví a opravují hnízda, probíhá páření, snášení vajec nebo již i sezení na snůškách či péče o malá mláďata. Pár je **monogamní** (alespoň pro danou sezónu). Samice snáší 3–5 (vzácně 2–6) podlouhlých, světle modrých nebo nazelenalých vajec, která jsou pokryta drsným bílým vápenitým povlakem. Na vejcích sedí oba rodiče střídavě po dobu 28–31 dní. Vylíhlá mláďata jsou krmivá (altriciální), rodí se holá, slepá a jsou zcela závislá na rodičovské péči. Krmí je oba rodiče **vyvrhováním natrávené potravy (ryb)** z volete přímo do zobáku mláděte. Mláďata zůstávají na hnízdě poměrně dlouho, opouštějí ho ve věku asi 50 dní, ale plně vzletná jsou až o něco později (kolem 60 dní). Rodiče je ještě několik dalších týdnů přikrmují. Kvůli hnízdění ve velkých koloniích bývají stromy pod hnízdy často silně pokryty trusem, který může vést i k jejich postupnému usychání.
+
+**Migrace:** Kormorán velký je **částečně tažným ptákem**. Ptáci ze severní Evropy jsou převážně tažní a na zimu se stahují na jih a západ, do oblastí s nezamrzajícími vodami. Ptáci ze střední a jižní Evropy jsou často **stálí** nebo podnikají jen kratší potulky a přelety mezi hnízdišti a zimovišti či potravními lokalitami. V České republice se tedy vyskytují jak ptáci, kteří zde hnízdí a tráví celý rok (nebo alespoň jeho část), tak ptáci, kteří zde zimují (přilétají v říjnu/listopadu) nebo přes naše území jen protahují (na jaře v únoru–dubnu, na podzim v září–listopadu).
+
+**Ochrana a ohrožení:** V České republice je kormorán velký, vzhledem k výraznému nárůstu jeho početnosti v posledních desetiletích, hodnocen jako **málo dotčený (LC)** druh. Nepodléhá zvláštní zákonné ochraně (byl vyjmut ze seznamu zvláště chráněných druhů), ale vztahuje se na něj obecná ochrana ptáků. Jeho stavy jsou však **regulovány** prostřednictvím povolování odstřelu a plašení, a to zejména z důvodu **konfliktů s rybářským hospodařením**. Celosvětově je díky svému velkému areálu rozšíření a vysoké početnosti hodnocen organizací IUCN rovněž jako **málo dotčený (Least Concern)** druh. V minulosti byl kormorán **intenzivně pronásledován** jako škůdce ryb a konkurent rybářů, což vedlo k jeho téměř úplnému vymizení z vnitrozemské Evropy. Po zavedení zákonné ochrany v mnoha zemích ve druhé polovině 20. století se jeho populace začaly zotavovat a následně došlo k jejich výraznému nárůstu a rozšíření. Tento nárůst však opět vyvolal **konflikty s komerčním i sportovním rybářstvím**, protože kormoráni mohou na rybnících a řekách působit značné škody na rybích obsádkách. Otázka regulace jejich početnosti a hledání způsobů soužití s rybářskými zájmy je proto velmi aktuální a často kontroverzní. Dalšími potenciálními hrozbami mohou být **znečištění vod** (které může ovlivnit jak rybí obsádky, tak přímo kormorány hromaděním toxinů), **ztráta vhodných hnízdních příležitostí** (kácení stromů v koloniích), **rušení** na hnízdištích a zimovištích a **kolize s dráty elektrického vedení**.
+
+**Závěr:** Kormorán velký je velmi úspěšný a přizpůsobivý vodní pták, jehož návrat a populační růst v Evropě v posledních desetiletích je pozoruhodným příběhem. Je fascinujícím příkladem efektivního rybožravého predátora s unikátním chováním, jako je potápění a charakteristické sušení křídel. Jeho přítomnost na našich rybnících a řekách je dnes běžným jevem. Zároveň však jeho rostoucí početnost vyvolává značné konflikty s lidskými zájmy, zejména v oblasti rybářství. Nalézt udržitelnou rovnováhu mezi ochranou tohoto druhu a minimalizací škod, které působí, je jednou z komplexních výzev současného managementu volně žijících živočichů a ochrany přírody.
+
+## Rozšíření
+
+Viz taxonomie. V 19. století vlivem pronásledování zmizel z mnoha evropských zemí. Od 70.let minulého století se díky ochraně začal opět rozšiřovat a zvýšila se i početnost. V současnosti hnízdí v Evropě více než 310 tisíc párů. Severnější populace se v zimě přesunují jižněji, ostatní jsou stálé.  
+U nás jsou zaznamenány první pokusy o zahnízdění v roce 1938 na jižní Moravě. První stálá kolonie vznikla až v roce 1982 na střední Novomlýnské nádrži, o rok později na Třeboňsku. V dalších letech se počty rychle zvyšovaly, maximum párů u nás hnízdilo v roce 1989 – 710. Od roku 1987 jsou počty kormoránů regulovány, tento stav trvá i v současnosti. V letech 2001-03 na našem území hnízdilo 200-232 párů – 117-139 v jižních Čechách, 81-85 na jižní Moravě a 2-8 párů jinde.
+
+## Zajímavosti
+
+V České republice je kormorán velký chráněn a je rovněž v příloze I evropské Směrnice o ptácích Natura 2000. Hnízdící populace se vyskytují na rybnících CHKO [Třeboňsko](http://www.biolib.cz/cz/locality/id3532/) a v dolním [Podyjí](http://www.biolib.cz/cz/locality/id3509/), jejich početnost dosahuje několik set kusů. V podzimních měsících ovšem přetahují přes území zejména jižních Čech až desítky tisíc kormoránů, jejichž lov může v krátkém časovém období vést k výrazným škodám na rybí obsádce. Proto je kormorán zahrnut v zákoně o náhradě škod způsobených zvláště chráněnými druhy živočichů. Každý majitel rybníka tak může na základě prokázané škody požádat o náhradu, která je mu vyplacena z rozpočtu Ministerstva životního prostředí. Navíc v nejexponovanějších lokalitách je povolen odstřel. Kormorán ovšem nemá dobré maso ani vhodné peří a jeho odstřel tak má výhradně regulační účel.
+
+## Význam
+
+V Červeném seznamu ČR je zařazen v kategorii [VU](http://www.biolib.cz/cz/glossaryterm/id3210/) – zranitelný druh.
