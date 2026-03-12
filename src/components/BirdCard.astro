@@ -1,0 +1,20 @@
+---
+interface Props {
+  slug: string;
+  czechName: string;
+  latinName: string;
+  image: string | null;
+}
+const { slug, czechName, latinName, image } = Astro.props;
+---
+<a href={`/atlas/${slug}/`} class="bird-card" data-name={czechName.toLowerCase() + ' ' + latinName.toLowerCase()}>
+  {image ? (
+    <div class="img-wrap"><img src={image} alt={czechName} loading="lazy" /></div>
+  ) : (
+    <div class="no-image">🐦</div>
+  )}
+  <div class="text">
+    <div class="name">{czechName}</div>
+    <div class="latin">{latinName}</div>
+  </div>
+</a>

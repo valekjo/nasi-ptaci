@@ -1,0 +1,67 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SoundPlayer from '../../components/SoundPlayer.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('birds');
+  return entries.map(entry => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+
+// Get all birds for prev/next navigation
+const allBirds = (await getCollection('birds')).sort((a, b) =>
+  a.data.czechName.localeCompare(b.data.czechName, 'cs')
+);
+const idx = allBirds.findIndex(b => b.data.slug === d.slug);
+const prev = idx > 0 ? allBirds[idx - 1] : null;
+const next = idx < allBirds.length - 1 ? allBirds[idx + 1] : null;
+---
+<BaseLayout title={d.czechName}>
+  <div class="bird-detail">
+    <div class="bird-hero">
+      {d.image && <img src={d.image} alt={d.czechName} />}
+      <h1>{d.czechName}</h1>
+      <div class="latin">{d.latinName}</div>
+    </div>
+
+    {d.sound && <SoundPlayer src={d.sound} label="Přehrát hlas" />}
+
+    <dl class="bird-info-box">
+      {d.order && <>
+        <dt>Řád</dt><dd>{d.order}</dd>
+      </>}
+      {d.family && <>
+        <dt>Čeleď</dt><dd>{d.family}</dd>
+      </>}
+      {d.sizeLength && <>
+        <dt>Délka</dt><dd>{d.sizeLength}</dd>
+      </>}
+      {d.sizeWingspan && <>
+        <dt>Rozpětí</dt><dd>{d.sizeWingspan}</dd>
+      </>}
+      {d.sizeWeight && <>
+        <dt>Hmotnost</dt><dd>{d.sizeWeight}</dd>
+      </>}
+    </dl>
+
+    <div class="bird-content">
+      <Content />
+    </div>
+
+    <p style="margin-top: 1rem; font-size: 0.9rem;">
+      <a href={d.sourceUrl} target="_blank" rel="noopener">Zdroj: nasiptaci.info</a>
+    </p>
+
+    <nav class="bird-nav">
+      {prev ? <a href={`/atlas/${prev.data.slug}/`}>&larr; {prev.data.czechName}</a> : <span></span>}
+      {next ? <a href={`/atlas/${next.data.slug}/`}>{next.data.czechName} &rarr;</a> : <span></span>}
+    </nav>
+  </div>
+</BaseLayout>

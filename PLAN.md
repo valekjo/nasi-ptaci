@@ -59,6 +59,7 @@ Define `birds` collection with typed schema (czechName, latinName, image, sounds
 - Taxonomy & size in a sidebar/info box
 - Full markdown body via Astro `<Content />`
 - Back to atlas link, prev/next bird navigation
+- Link to original source page on nasiptaci.info (e.g. `https://nasiptaci.info/kos-cerny/`)
 
 ---
 
@@ -108,6 +109,12 @@ Define `birds` collection with typed schema (czechName, latinName, image, sounds
 - Photos styled as taped/pinned with shadow + CSS pseudo-element tape corners
 - Asymmetric `border-radius` for hand-drawn feel
 - Audio player styled as simple sketchy play button
+
+---
+
+## Footer
+- Credit the original data source: link to [nasiptaci.info](https://nasiptaci.info) with a short attribution line (e.g. "Data z nasiptaci.info")
+- Displayed on every page via `BaseLayout.astro`
 
 ---
 

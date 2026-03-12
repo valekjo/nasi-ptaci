@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BirdCard from '../components/BirdCard.astro';
+import birds from '../data/birds.json';
+---
+<BaseLayout title="Atlas ptáků">
+  <h2>Atlas ptáků</h2>
+  <div class="search-box">
+    <input type="text" id="bird-search" placeholder="Hledat ptáka..." autocomplete="off" />
+  </div>
+  <div class="bird-grid" id="bird-grid">
+    {birds.map(bird => (
+      <BirdCard
+        slug={bird.slug}
+        czechName={bird.czechName}
+        latinName={bird.latinName}
+        image={bird.image}
+      />
+    ))}
+  </div>
+  <div class="no-results" id="no-results" style="display:none">
+    <p>Žádný pták nenalezen</p>
+  </div>
+</BaseLayout>
+
+<script>
+  const norm = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  const input = document.getElementById('bird-search') as HTMLInputElement;
+  const cards = document.querySelectorAll('.bird-card') as NodeListOf<HTMLElement>;
+  const noResults = document.getElementById('no-results') as HTMLElement;
+  const names = Array.from(cards).map(c => norm(c.getAttribute('data-name') || ''));
+
+  input.addEventListener('input', () => {
+    const q = norm(input.value.trim());
+    let visible = 0;
+    cards.forEach((card, i) => {
+      const show = names[i].includes(q);
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    noResults.style.display = visible === 0 && q ? '' : 'none';
+  });
+</script>

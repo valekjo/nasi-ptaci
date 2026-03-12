@@ -1,0 +1,34 @@
+---
+interface Props {
+  src: string;
+  label?: string;
+}
+const { src, label = 'Přehrát hlas' } = Astro.props;
+---
+<div class="sound-player" data-sound={src}>
+  <button class="play-btn" aria-label={label}>▶</button>
+  <span>{label}</span>
+</div>
+
+<script>
+  document.querySelectorAll('.sound-player').forEach(player => {
+    const btn = player.querySelector('.play-btn') as HTMLButtonElement;
+    const src = player.getAttribute('data-sound')!;
+    let audio: HTMLAudioElement | null = null;
+
+    btn.addEventListener('click', () => {
+      if (!audio) {
+        audio = new Audio(src);
+        audio.addEventListener('ended', () => { btn.textContent = '▶'; });
+      }
+      if (audio.paused) {
+        audio.play();
+        btn.textContent = '⏸';
+      } else {
+        audio.pause();
+        audio.currentTime = 0;
+        btn.textContent = '▶';
+      }
+    });
+  });
+</script>

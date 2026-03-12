@@ -1,0 +1,24 @@
+{
+  "name": "nasi-ptaci",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build:data": "node scripts/build-bird-index.mjs",
+    "dev": "npm run build:data && astro dev --host 0.0.0.0",
+    "build": "npm run build:data && astro build",
+    "preview": "astro preview",
+    "test": "playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@josef-macbook-pro.local:2222/valekjo/nasi-ptaci.git"
+  },
+  "dependencies": {
+    "@astrojs/preact": "^5.0.0",
+    "astro": "^6.0.4",
+    "preact": "^10.29.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  }
+}
