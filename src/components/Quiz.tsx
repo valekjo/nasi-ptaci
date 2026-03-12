@@ -72,8 +72,17 @@ export default function Quiz({ birds }: Props) {
     setQuestions(generateQuestions(pool, m, count));
   }, []);
 
+  function stopSound() {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+      audioRef.current = null;
+    }
+  }
+
   function answer(bird: Bird) {
     if (answered) return;
+    stopSound();
     const q = questions[current];
     const ok = bird.slug === q.correct.slug;
     setAnswered(bird.slug);
