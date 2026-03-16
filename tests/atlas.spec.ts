@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Atlas – Homepage', () => {
   test('loads and shows header, nav, and footer', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/nasi-ptaci/');
     await expect(page.locator('.site-header h1')).toHaveText('Naši Ptáci');
     await expect(page.locator('.site-header nav a').first()).toHaveText('Atlas');
     await expect(page.locator('.site-header nav a').nth(1)).toHaveText('Kvíz');
@@ -10,22 +10,22 @@ test.describe('Atlas – Homepage', () => {
   });
 
   test('renders bird grid with 184 cards', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/nasi-ptaci/');
     const cards = page.locator('.bird-card');
     await expect(cards).toHaveCount(184);
   });
 
   test('each card has a name, latin name, and links to detail', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/nasi-ptaci/');
     const firstCard = page.locator('.bird-card').first();
     await expect(firstCard.locator('.text .name')).not.toBeEmpty();
     await expect(firstCard.locator('.text .latin')).not.toBeEmpty();
     const href = await firstCard.getAttribute('href');
-    expect(href).toMatch(/^\/atlas\/[\w-]+\/$/);
+    expect(href).toMatch(/^\/nasi-ptaci\/atlas\/[\w-]+\/$/);
   });
 
   test('most cards have images', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/nasi-ptaci/');
     const cardsWithImg = page.locator('.bird-card img');
     const count = await cardsWithImg.count();
     // 126 out of 184 birds have images
@@ -33,14 +33,14 @@ test.describe('Atlas – Homepage', () => {
   });
 
   test('cards are sorted alphabetically by Czech name', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/nasi-ptaci/');
     const names = await page.locator('.bird-card .name').allTextContents();
     const sorted = [...names].sort((a, b) => a.localeCompare(b, 'cs'));
     expect(names).toEqual(sorted);
   });
 
   test('search filters cards by Czech name', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/nasi-ptaci/');
     const searchInput = page.locator('#bird-search');
     await searchInput.fill('sýkora');
     await page.waitForTimeout(100);
@@ -57,7 +57,7 @@ test.describe('Atlas – Homepage', () => {
   });
 
   test('search ignores diacritics', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/nasi-ptaci/');
     await page.locator('#bird-search').fill('sykora');
     await page.waitForTimeout(100);
 
@@ -72,7 +72,7 @@ test.describe('Atlas – Homepage', () => {
   });
 
   test('search ignores casing', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/nasi-ptaci/');
     await page.locator('#bird-search').fill('KOS');
     await page.waitForTimeout(100);
 
@@ -82,7 +82,7 @@ test.describe('Atlas – Homepage', () => {
   });
 
   test('search filters cards by Latin name', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/nasi-ptaci/');
     await page.locator('#bird-search').fill('turdus');
     await page.waitForTimeout(100);
 
@@ -93,7 +93,7 @@ test.describe('Atlas – Homepage', () => {
   });
 
   test('clearing search shows all cards again', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/nasi-ptaci/');
     const searchInput = page.locator('#bird-search');
     await searchInput.fill('sýkora');
     await page.waitForTimeout(100);
@@ -105,7 +105,7 @@ test.describe('Atlas – Homepage', () => {
   });
 
   test('search with no matches shows no-results message', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/nasi-ptaci/');
     await page.locator('#bird-search').fill('xyznonexistent');
     await page.waitForTimeout(100);
 
@@ -116,7 +116,7 @@ test.describe('Atlas – Homepage', () => {
   });
 
   test('no-results message hides when search matches again', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/nasi-ptaci/');
     await page.locator('#bird-search').fill('xyznonexistent');
     await page.waitForTimeout(100);
     await expect(page.locator('#no-results')).toBeVisible();

@@ -18,6 +18,7 @@ interface Props {
 }
 
 const STORAGE_KEY = 'nasiptaci-bird-set';
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -125,7 +126,7 @@ export default function Quiz({ birds }: Props) {
           {results.map((r, i) => (
             <li key={i}>
               <span class={`mark ${r.ok ? 'ok' : 'fail'}`}>{r.ok ? '✓' : '✗'}</span>
-              {r.correct.image && <img src={r.correct.image} alt={r.correct.czechName} />}
+              {r.correct.image && <img src={`${BASE}${r.correct.image}`} alt={r.correct.czechName} />}
               <span>
                 {r.correct.czechName}
                 {!r.ok && <span style={{ color: 'var(--wrong)' }}> (vaše odpověď: {r.chosen.czechName})</span>}
@@ -134,7 +135,7 @@ export default function Quiz({ birds }: Props) {
           ))}
         </ul>
         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-          <a href="/kviz/" class="start-btn" style={{ display: 'inline-block', textDecoration: 'none' }}>Nový kvíz</a>
+          <a href={`${BASE}/kviz/`} class="start-btn" style={{ display: 'inline-block', textDecoration: 'none' }}>Nový kvíz</a>
         </div>
       </div>
     );
@@ -149,14 +150,14 @@ export default function Quiz({ birds }: Props) {
       </div>
 
       {mode === 'image' && q.correct.image && (
-        <img class="quiz-question-img" src={q.correct.image} alt="Který je to pták?" />
+        <img class="quiz-question-img" src={`${BASE}${q.correct.image}`} alt="Který je to pták?" />
       )}
 
       {mode === 'sound' && q.correct.sound && (
         <div style={{ marginBottom: '1.5rem' }}>
           <button
             class="start-btn"
-            onClick={() => playSound(q.correct.sound!)}
+            onClick={() => playSound(`${BASE}${q.correct.sound!}`)}
             style={{ fontSize: '1.3rem', padding: '0.5rem 2rem' }}
           >
             ▶ Přehrát hlas
@@ -176,7 +177,7 @@ export default function Quiz({ birds }: Props) {
           if (mode === 'sound') {
             return (
               <div key={bird.slug} class={cls} onClick={() => answer(bird)}>
-                {bird.image && <img src={bird.image} alt={bird.czechName} />}
+                {bird.image && <img src={`${BASE}${bird.image}`} alt={bird.czechName} />}
                 {bird.czechName}
               </div>
             );

@@ -14,6 +14,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 // Get all birds for prev/next navigation
 const allBirds = (await getCollection('birds')).sort((a, b) =>
@@ -26,12 +27,12 @@ const next = idx < allBirds.length - 1 ? allBirds[idx + 1] : null;
 <BaseLayout title={d.czechName}>
   <div class="bird-detail">
     <div class="bird-hero">
-      {d.image && <img src={d.image} alt={d.czechName} />}
+      {d.image && <img src={`${base}${d.image}`} alt={d.czechName} />}
       <h1>{d.czechName}</h1>
       <div class="latin">{d.latinName}</div>
     </div>
 
-    {d.sound && <SoundPlayer src={d.sound} label="Přehrát hlas" />}
+    {d.sound && <SoundPlayer src={`${base}${d.sound}`} label="Přehrát hlas" />}
 
     <dl class="bird-info-box">
       {d.order && <>
@@ -60,8 +61,8 @@ const next = idx < allBirds.length - 1 ? allBirds[idx + 1] : null;
     </p>
 
     <nav class="bird-nav">
-      {prev ? <a href={`/atlas/${prev.data.slug}/`}>&larr; {prev.data.czechName}</a> : <span></span>}
-      {next ? <a href={`/atlas/${next.data.slug}/`}>{next.data.czechName} &rarr;</a> : <span></span>}
+      {prev ? <a href={`${base}/atlas/${prev.data.slug}/`}>&larr; {prev.data.czechName}</a> : <span></span>}
+      {next ? <a href={`${base}/atlas/${next.data.slug}/`}>{next.data.czechName} &rarr;</a> : <span></span>}
     </nav>
   </div>
 </BaseLayout>

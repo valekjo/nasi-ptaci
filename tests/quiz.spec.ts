@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Quiz Setup Page', () => {
   test('renders quiz setup with mode cards and count selector', async ({ page }) => {
-    await page.goto('/kviz/');
+    await page.goto('/nasi-ptaci/kviz/');
 
     await expect(page.locator('h2', { hasText: 'Poznáš ptáka?' })).toBeVisible();
     await expect(page.locator('.mode-card')).toHaveCount(2);
@@ -13,14 +13,14 @@ test.describe('Quiz Setup Page', () => {
   });
 
   test('image mode is selected by default and start is enabled', async ({ page }) => {
-    await page.goto('/kviz/');
+    await page.goto('/nasi-ptaci/kviz/');
 
     await expect(page.locator('.mode-card', { hasText: 'Poznej podle fotky' })).toHaveClass(/selected/);
     await expect(page.locator('.start-btn')).toBeEnabled();
   });
 
   test('selecting a mode highlights the card', async ({ page }) => {
-    await page.goto('/kviz/');
+    await page.goto('/nasi-ptaci/kviz/');
 
     const imageCard = page.locator('.mode-card', { hasText: 'Poznej podle fotky' });
     await imageCard.click();
@@ -34,7 +34,7 @@ test.describe('Quiz Setup Page', () => {
   });
 
   test('selecting count highlights the button', async ({ page }) => {
-    await page.goto('/kviz/');
+    await page.goto('/nasi-ptaci/kviz/');
 
     // 10 is selected by default
     await expect(page.locator('.count-btn', { hasText: '10' })).toHaveClass(/selected/);
@@ -46,7 +46,7 @@ test.describe('Quiz Setup Page', () => {
   });
 
   test('start button navigates to quiz game with correct params', async ({ page }) => {
-    await page.goto('/kviz/');
+    await page.goto('/nasi-ptaci/kviz/');
 
     await page.locator('.mode-card', { hasText: 'Poznej podle fotky' }).click();
     await page.locator('.count-btn', { hasText: '20' }).click();
@@ -58,7 +58,7 @@ test.describe('Quiz Setup Page', () => {
   });
 
   test('bird set manager toggles open and closed', async ({ page }) => {
-    await page.goto('/kviz/');
+    await page.goto('/nasi-ptaci/kviz/');
 
     // Initially hidden
     await expect(page.locator('.bird-set-manager')).not.toBeVisible();
@@ -73,7 +73,7 @@ test.describe('Quiz Setup Page', () => {
   });
 
   test('bird set manager shows all birds with checkboxes', async ({ page }) => {
-    await page.goto('/kviz/');
+    await page.goto('/nasi-ptaci/kviz/');
 
     await page.locator('.count-btn', { hasText: 'Vlastní sada ptáků' }).click();
 
@@ -83,7 +83,7 @@ test.describe('Quiz Setup Page', () => {
   });
 
   test('bird set manager filter works', async ({ page }) => {
-    await page.goto('/kviz/');
+    await page.goto('/nasi-ptaci/kviz/');
 
     await page.locator('.count-btn', { hasText: 'Vlastní sada ptáků' }).click();
     await page.locator('.bird-set-manager input[placeholder="Filtrovat..."]').fill('sýkora');
@@ -95,7 +95,7 @@ test.describe('Quiz Setup Page', () => {
   });
 
   test('bird set manager filter ignores diacritics', async ({ page }) => {
-    await page.goto('/kviz/');
+    await page.goto('/nasi-ptaci/kviz/');
 
     await page.locator('.count-btn', { hasText: 'Vlastní sada ptáků' }).click();
     await page.locator('.bird-set-manager input[placeholder="Filtrovat..."]').fill('sykora');
@@ -107,7 +107,7 @@ test.describe('Quiz Setup Page', () => {
   });
 
   test('bird set manager select/deselect all', async ({ page }) => {
-    await page.goto('/kviz/');
+    await page.goto('/nasi-ptaci/kviz/');
 
     await page.locator('.count-btn', { hasText: 'Vlastní sada ptáků' }).click();
 
@@ -127,7 +127,7 @@ test.describe('Quiz Setup Page', () => {
 
 test.describe('Quiz Game – Image Mode', () => {
   test('shows question with image and 4 options', async ({ page }) => {
-    await page.goto('/kviz/hra?mode=image&count=10');
+    await page.goto('/nasi-ptaci/kviz/hra?mode=image&count=10');
 
     // Wait for quiz to initialize
     await expect(page.locator('.quiz-progress')).toBeVisible({ timeout: 5000 });
@@ -141,7 +141,7 @@ test.describe('Quiz Game – Image Mode', () => {
   });
 
   test('answering a question shows correct/wrong and advances', async ({ page }) => {
-    await page.goto('/kviz/hra?mode=image&count=10');
+    await page.goto('/nasi-ptaci/kviz/hra?mode=image&count=10');
 
     await expect(page.locator('.quiz-progress')).toBeVisible({ timeout: 5000 });
 
@@ -156,7 +156,7 @@ test.describe('Quiz Game – Image Mode', () => {
   });
 
   test('completing all questions shows results', async ({ page }) => {
-    await page.goto('/kviz/hra?mode=image&count=10');
+    await page.goto('/nasi-ptaci/kviz/hra?mode=image&count=10');
     await expect(page.locator('.quiz-progress')).toBeVisible({ timeout: 5000 });
 
     // Answer all 10 questions by clicking the first option each time
@@ -176,7 +176,7 @@ test.describe('Quiz Game – Image Mode', () => {
   });
 
   test('results show review list with marks', async ({ page }) => {
-    await page.goto('/kviz/hra?mode=image&count=10');
+    await page.goto('/nasi-ptaci/kviz/hra?mode=image&count=10');
     await expect(page.locator('.quiz-progress')).toBeVisible({ timeout: 5000 });
 
     for (let i = 0; i < 10; i++) {
@@ -199,7 +199,7 @@ test.describe('Quiz Game – Image Mode', () => {
   });
 
   test('results page has link back to quiz setup', async ({ page }) => {
-    await page.goto('/kviz/hra?mode=image&count=10');
+    await page.goto('/nasi-ptaci/kviz/hra?mode=image&count=10');
     await expect(page.locator('.quiz-progress')).toBeVisible({ timeout: 5000 });
 
     for (let i = 0; i < 10; i++) {
@@ -219,7 +219,7 @@ test.describe('Quiz Game – Image Mode', () => {
 
 test.describe('Quiz Game – Sound Mode', () => {
   test('shows play button and 4 image+name options', async ({ page }) => {
-    await page.goto('/kviz/hra?mode=sound&count=10');
+    await page.goto('/nasi-ptaci/kviz/hra?mode=sound&count=10');
     await expect(page.locator('.quiz-progress')).toBeVisible({ timeout: 5000 });
 
     // Should NOT show a question image
@@ -254,12 +254,12 @@ test.describe('Quiz with Custom Bird Set', () => {
     ];
 
     // Navigate first to set localStorage, then reload
-    await page.goto('/kviz/');
+    await page.goto('/nasi-ptaci/kviz/');
     await page.evaluate((set) => {
       localStorage.setItem('nasiptaci-bird-set', JSON.stringify(set));
     }, customSet);
 
-    await page.goto('/kviz/hra?mode=image&count=5');
+    await page.goto('/nasi-ptaci/kviz/hra?mode=image&count=5');
     await expect(page.locator('.quiz-progress')).toBeVisible({ timeout: 5000 });
     await expect(page.locator('.quiz-progress')).toContainText('Otázka 1 / 5');
 

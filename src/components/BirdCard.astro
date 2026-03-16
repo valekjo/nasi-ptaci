@@ -6,10 +6,11 @@ interface Props {
   image: string | null;
 }
 const { slug, czechName, latinName, image } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
-<a href={`/atlas/${slug}/`} class="bird-card" data-name={czechName.toLowerCase() + ' ' + latinName.toLowerCase()}>
+<a href={`${base}/atlas/${slug}/`} class="bird-card" data-name={czechName.toLowerCase() + ' ' + latinName.toLowerCase()}>
   {image ? (
-    <div class="img-wrap"><img src={image} alt={czechName} loading="lazy" /></div>
+    <div class="img-wrap"><img src={`${base}${image}`} alt={czechName} loading="lazy" /></div>
   ) : (
     <div class="no-image">🐦</div>
   )}

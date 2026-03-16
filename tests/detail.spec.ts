@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Bird Detail Page', () => {
   test('renders Kos černý detail page with all sections', async ({ page }) => {
-    await page.goto('/atlas/kos-cerny/');
+    await page.goto('/nasi-ptaci/atlas/kos-cerny/');
 
     // Hero section
     await expect(page.locator('.bird-hero h1')).toHaveText('Kos černý');
@@ -11,7 +11,7 @@ test.describe('Bird Detail Page', () => {
   });
 
   test('shows taxonomy and size info box', async ({ page }) => {
-    await page.goto('/atlas/kos-cerny/');
+    await page.goto('/nasi-ptaci/atlas/kos-cerny/');
 
     const infoBox = page.locator('.bird-info-box');
     await expect(infoBox).toBeVisible();
@@ -22,7 +22,7 @@ test.describe('Bird Detail Page', () => {
   });
 
   test('shows sound player for birds with sound', async ({ page }) => {
-    await page.goto('/atlas/kos-cerny/');
+    await page.goto('/nasi-ptaci/atlas/kos-cerny/');
 
     const player = page.locator('.sound-player');
     await expect(player).toBeVisible();
@@ -32,7 +32,7 @@ test.describe('Bird Detail Page', () => {
   });
 
   test('has markdown body content', async ({ page }) => {
-    await page.goto('/atlas/kos-cerny/');
+    await page.goto('/nasi-ptaci/atlas/kos-cerny/');
 
     const content = page.locator('.bird-content');
     await expect(content).toBeVisible();
@@ -41,7 +41,7 @@ test.describe('Bird Detail Page', () => {
   });
 
   test('has source link to nasiptaci.info', async ({ page }) => {
-    await page.goto('/atlas/kos-cerny/');
+    await page.goto('/nasi-ptaci/atlas/kos-cerny/');
 
     const sourceLink = page.locator('a', { hasText: 'Zdroj: nasiptaci.info' });
     await expect(sourceLink).toBeVisible();
@@ -50,7 +50,7 @@ test.describe('Bird Detail Page', () => {
   });
 
   test('has prev/next navigation', async ({ page }) => {
-    await page.goto('/atlas/kos-cerny/');
+    await page.goto('/nasi-ptaci/atlas/kos-cerny/');
 
     const nav = page.locator('.bird-nav');
     await expect(nav).toBeVisible();
@@ -61,11 +61,11 @@ test.describe('Bird Detail Page', () => {
   });
 
   test('prev/next links navigate to other bird pages', async ({ page }) => {
-    await page.goto('/atlas/kos-cerny/');
+    await page.goto('/nasi-ptaci/atlas/kos-cerny/');
 
     const nextLink = page.locator('.bird-nav a').last();
     const nextHref = await nextLink.getAttribute('href');
-    expect(nextHref).toMatch(/^\/atlas\/[\w-]+\/$/);
+    expect(nextHref).toMatch(/^\/nasi-ptaci\/atlas\/[\w-]+\/$/);
 
     await nextLink.click();
     await expect(page.locator('.bird-hero h1')).toBeVisible();
@@ -74,7 +74,7 @@ test.describe('Bird Detail Page', () => {
   });
 
   test('clicking a card from homepage navigates to detail', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/nasi-ptaci/');
 
     // Find the Kos černý card and click it
     const card = page.locator('.bird-card', { hasText: 'Kos černý' });
@@ -86,7 +86,7 @@ test.describe('Bird Detail Page', () => {
 
   test('bird without image shows no hero image', async ({ page }) => {
     // Find a bird without image from JSON
-    await page.goto('/');
+    await page.goto('/nasi-ptaci/');
     const noImgCard = page.locator('.bird-card .no-image');
     const count = await noImgCard.count();
     if (count > 0) {
@@ -100,7 +100,7 @@ test.describe('Bird Detail Page', () => {
   });
 
   test('first bird in alphabet has no previous link', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/nasi-ptaci/');
     // Click the first card
     await page.locator('.bird-card').first().click();
 

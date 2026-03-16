@@ -1,6 +1,8 @@
 import { useState } from 'preact/hooks';
 import BirdSetManager from './BirdSetManager.tsx';
 
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 export default function QuizSetup() {
   const [mode, setMode] = useState<'image' | 'sound'>('image');
   const [count, setCount] = useState(10);
@@ -10,7 +12,7 @@ export default function QuizSetup() {
 
   function start() {
     if (!canStart) return;
-    window.location.href = `/kviz/hra?mode=${mode}&count=${count}`;
+    window.location.href = `${BASE}/kviz/hra?mode=${mode}&count=${count}`;
   }
 
   return (
