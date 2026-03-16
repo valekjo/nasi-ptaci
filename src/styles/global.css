@@ -68,6 +68,17 @@ a:hover {
   font-size: 3rem;
   color: var(--accent);
 }
+.site-header .header-credit {
+  font-size: 0.95rem;
+  color: var(--border);
+}
+.site-header .header-credit a {
+  color: var(--border);
+  text-decoration: underline;
+}
+.site-header .header-credit a:hover {
+  color: var(--accent);
+}
 .site-header nav {
   margin-top: 0.5rem;
   display: flex;
