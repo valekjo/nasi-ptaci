@@ -29,6 +29,8 @@ async function main() {
     }
   }
 
+  await mkdir(OUTPUT_CONTENT, { recursive: true });
+
   const birds = [];
 
   for (const file of files) {
