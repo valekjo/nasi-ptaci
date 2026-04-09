@@ -63,19 +63,19 @@ test.describe('Quiz Setup Page', () => {
     // Initially hidden
     await expect(page.locator('.bird-set-manager')).not.toBeVisible();
 
-    // Open it
-    await page.locator('.count-btn', { hasText: 'Vlastní sada ptáků' }).click();
+    // Open it via "Vlastní výběr"
+    await page.locator('.count-btn', { hasText: 'Vlastní výběr' }).click();
     await expect(page.locator('.bird-set-manager')).toBeVisible();
 
     // Close it
-    await page.locator('.count-btn', { hasText: 'Skrýt výběr ptáků' }).click();
+    await page.locator('.count-btn', { hasText: 'Skrýt vlastní výběr' }).click();
     await expect(page.locator('.bird-set-manager')).not.toBeVisible();
   });
 
   test('bird set manager shows all birds with checkboxes', async ({ page }) => {
     await page.goto('/nasi-ptaci/kviz/');
 
-    await page.locator('.count-btn', { hasText: 'Vlastní sada ptáků' }).click();
+    await page.locator('.count-btn', { hasText: 'Vlastní výběr' }).click();
 
     const checkboxes = page.locator('.bird-set-list label');
     const count = await checkboxes.count();
@@ -85,7 +85,7 @@ test.describe('Quiz Setup Page', () => {
   test('bird set manager filter works', async ({ page }) => {
     await page.goto('/nasi-ptaci/kviz/');
 
-    await page.locator('.count-btn', { hasText: 'Vlastní sada ptáků' }).click();
+    await page.locator('.count-btn', { hasText: 'Vlastní výběr' }).click();
     await page.locator('.bird-set-manager input[placeholder="Filtrovat..."]').fill('sýkora');
 
     const labels = page.locator('.bird-set-list label');
@@ -97,7 +97,7 @@ test.describe('Quiz Setup Page', () => {
   test('bird set manager filter ignores diacritics', async ({ page }) => {
     await page.goto('/nasi-ptaci/kviz/');
 
-    await page.locator('.count-btn', { hasText: 'Vlastní sada ptáků' }).click();
+    await page.locator('.count-btn', { hasText: 'Vlastní výběr' }).click();
     await page.locator('.bird-set-manager input[placeholder="Filtrovat..."]').fill('sykora');
 
     const labels = page.locator('.bird-set-list label');
@@ -109,7 +109,7 @@ test.describe('Quiz Setup Page', () => {
   test('bird set manager select/deselect all', async ({ page }) => {
     await page.goto('/nasi-ptaci/kviz/');
 
-    await page.locator('.count-btn', { hasText: 'Vlastní sada ptáků' }).click();
+    await page.locator('.count-btn', { hasText: 'Vlastní výběr' }).click();
 
     // Click "Zrušit vše"
     await page.locator('.bird-set-manager .controls button', { hasText: 'Zrušit vše' }).click();

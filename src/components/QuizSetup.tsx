@@ -1,12 +1,11 @@
 import { useState } from 'preact/hooks';
-import BirdSetManager from './BirdSetManager.tsx';
+import CollectionPicker from './CollectionPicker.tsx';
 
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 export default function QuizSetup() {
   const [mode, setMode] = useState<'image' | 'sound'>('image');
   const [count, setCount] = useState(10);
-  const [showSets, setShowSets] = useState(false);
 
   const canStart = true;
 
@@ -46,16 +45,7 @@ export default function QuizSetup() {
         ))}
       </div>
 
-      <div style={{ margin: '1rem 0' }}>
-        <button
-          class="count-btn"
-          onClick={() => setShowSets(!showSets)}
-        >
-          {showSets ? 'Skrýt výběr ptáků' : 'Vlastní sada ptáků'}
-        </button>
-      </div>
-
-      {showSets && <BirdSetManager />}
+      <CollectionPicker />
 
       <button class="start-btn" disabled={!canStart} onClick={start}>
         Začít kvíz

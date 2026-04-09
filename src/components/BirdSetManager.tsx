@@ -12,7 +12,11 @@ interface Bird {
   sound: string | null;
 }
 
-export default function BirdSetManager() {
+interface Props {
+  onSave?: (slugs: string[]) => void;
+}
+
+export default function BirdSetManager({ onSave }: Props) {
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [filter, setFilter] = useState('');
   const [useAll, setUseAll] = useState(true);
@@ -103,6 +107,13 @@ export default function BirdSetManager() {
           </label>
         ))}
       </div>
+      {onSave && !useAll && selected.size > 0 && (
+        <div class="save-collection">
+          <button onClick={() => onSave([...selected])}>
+            Uložit jako kolekci
+          </button>
+        </div>
+      )}
     </div>
   );
 }
